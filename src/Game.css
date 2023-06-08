@@ -1,0 +1,123 @@
+.Game {
+    max-width: 670px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scale: 0.8;
+}
+
+.App-title {
+    font-size: 3rem !important;
+    font-family: "Lobster", cursive;
+}
+
+.Game-dice-section {
+    width: 60%;
+    margin-inline: auto;
+}
+
+.Game-dice-section p,
+.Game-dice-section h3 {
+    scale: 1.5;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    word-spacing: 2px;
+    margin-bottom: 34px;
+    margin-top: 34px;
+}
+
+.Game-dice-section p {
+    animation: stretch infinite ease 3s;
+}
+
+@keyframes stretch {
+    0% {
+        word-spacing: 2px;
+        letter-spacing: 1px;
+    }
+    25% {
+        word-spacing: 20px;
+        letter-spacing: 5px;
+    }
+    50% {
+        word-spacing: 20px;
+        letter-spacing: 5px;
+    }
+    100% {
+        word-spacing: 2px;
+        letter-spacing: 1px;
+    }
+}
+
+marquee {
+    cursor: not-allowed !important;
+}
+
+.Game-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Game-reroll {
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 100;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to right, #91eae4 0%, #7f7fd5 51%, #91eae4 100%);
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.Game-reroll:hover {
+    cursor: pointer;
+    background-position: right center;
+}
+
+.Game-reroll:active,
+.Game-reroll:focus {
+    outline: none;
+}
+
+.Game-reroll:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.Game-description {
+    font-style: italic;
+    color: white;
+}
+
+.Game-header {
+    width: 100%;
+    background: linear-gradient(-45deg, #8d5cce, #a338be);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
