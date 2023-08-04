@@ -1,7 +1,9 @@
 # Yahtzee Game 🎲
 
 **This project is an implementation of the popular dice game Yahtzee. It allows players to play Yahtzee on their computer and keep track of their scores. 🎉**
+
 <br>
+
 >[Live Demo](https://vivek-chhabra.github.io/Yahtzee-Game/)
 
 <br>
