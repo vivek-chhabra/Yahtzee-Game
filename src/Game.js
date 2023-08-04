@@ -122,8 +122,8 @@ export default function Game() {
                     {diceArea()}
                     <div className="Game-button-wrapper">
                         {isGameEnd ? (
-                            <button className="Game-reroll rolling" style={{ cursor: "default" }}>
-                                Refresh The Page To Restart
+                            <button className="Game-reroll rolling" onClick={() => window.location.reload()} style={{ cursor: "default" }}>
+                                Restart the Game
                             </button>
                         ) : (
                             gameButtonWrapper()

@@ -12,6 +12,12 @@ export default function ScoreTable(props) {
         for (let key in scores) {
             if (scores[key]) totalScore += scores[key];
         }
+        if (!localStorage.getItem("highestScore")) {
+            alert("worked");
+            localStorage.setItem("highestScore", `${totalScore}`);
+        } else if (+localStorage.getItem("highestScore") < totalScore) {
+            localStorage.setItem("highestScore", `${totalScore}`);
+        }
         return totalScore;
     };
 
@@ -42,7 +48,12 @@ export default function ScoreTable(props) {
                     </tbody>
                 </table>
             </section>
-            <div className="total-score Game-header">Total Score: {getTotal()}</div>
+            <div className="total-score Game-header">
+                Total Score: {getTotal()} / Highest Score: {localStorage.getItem("highestScore")}
+            </div>
+            {/* <div className="total-score Game-header">
+                Reset The Scores
+            </div> */}
         </div>
     );
 }
