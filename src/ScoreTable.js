@@ -13,7 +13,6 @@ export default function ScoreTable(props) {
             if (scores[key]) totalScore += scores[key];
         }
         if (!localStorage.getItem("highestScore")) {
-            alert("worked");
             localStorage.setItem("highestScore", `${totalScore}`);
         } else if (+localStorage.getItem("highestScore") < totalScore) {
             localStorage.setItem("highestScore", `${totalScore}`);
